@@ -44,6 +44,8 @@ h5 {
 .student-card {
   padding: 1rem;
   border-radius: 0.5rem;
+  margin: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .student-profile {
@@ -51,7 +53,7 @@ h5 {
   gap: 1rem;
 }
 
-.student-profile img {
+.student-profile > img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -60,12 +62,18 @@ h5 {
 .student-details {
   align-self: center;
 }
+.student-details > img {
+  align-self: flex-end;
+}
 .student-details small {
   font-size: 0.8rem;
 }
 .student-card > h5 {
   font-size: 16px;
   margin: 0.5rem;
+}
+.student-card > p {
+  opacity: 0.5;
 }
 .daniel {
   background-color: var(--purple500);
@@ -94,7 +102,7 @@ h5 {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   .container {
     padding: 2rem;
     gap: 1.5rem;
@@ -102,9 +110,15 @@ h5 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+  .student-card {
+    margin: 0;
+  }
   .daniel {
     grid-column: span 2;
     grid-row: 1;
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-position: 95% 5%;
+    background-repeat: no-repeat;
   }
   .jonathan {
     grid-row: 1;
